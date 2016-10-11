@@ -25,7 +25,6 @@ void server_receive_handler(int socketfd){
 	if ((numbytes = read(socketfd, buffer, MAXDATASIZE)) < 0)
 		error("Read socketfd error");
 	buffer[numbytes] = '\0';
-	for (int l = strlen(name); l--; printf("\b"));
 	printf("\r%s\n", buffer);
 }
 
